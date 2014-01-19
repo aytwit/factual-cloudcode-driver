@@ -25,6 +25,13 @@ Parse.Cloud.define("factualTest", function(request, response) {
     });
 });
 ```
+
+#Debugging
+To print debug information to the CloudCode log.
+```javascript
+factual.startDebug();
+```
+
 #Further documentation
 I will write more extensive documentation as soon as I get the time to do it. Sorry for the inconvinience!
 
