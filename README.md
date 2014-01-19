@@ -32,4 +32,4 @@ For more info please look at:
 * [Factual’s supported node.js driver](https://github.com/Factual/factual-nodejs-driver)
 
 #Known Bugs
-* HTTP-POST support is still in development, thus no support for submitting places to the Factual API.
+* HTTP-POST support is still in development.
