@@ -20,7 +20,7 @@ Parse.Cloud.define("factualTest", function(request, response) {
         if(!error) {
             response.success(res.data);
         } else {
-            response.error("");
+            response.error("Error " + error.status + ": " + error.message);
         }
     });
 });
