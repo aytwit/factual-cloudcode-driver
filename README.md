@@ -14,6 +14,7 @@ var factual = new Factual('FACTUAL_API_KEY', 'FACTUAL_API_SECRET');
 If you don't have a Factual API account yet, [it's free and easy to get one](https://www.factual.com/api-keys/request).
 
 #Example of a GET request to the Factual API
+You can pass parameters as a simple string:
 ```javascript
 Parse.Cloud.define("factualTest", function(request, response) {
     factual.get('/t/places','q=starbucks&limit=5', function (error, res) {
@@ -25,7 +26,28 @@ Parse.Cloud.define("factualTest", function(request, response) {
     });
 });
 ```
+Or you can use an object:
+```javascript
+Parse.Cloud.define("factualTest", function(request, response) {
+    var params = {
+            geo: {
+               "$circle": {
+                   "$center": [34.06021,-118.41828],
+                   "$meters": 5000
+               }
+            },
+        limit: 1
+    };
 
+    factual.get('/t/restaurants-us',params, function (error, res) {
+        if(!error) {
+            response.success(res.data);
+        } else {
+            response.error("Error " + error.code + ": " + error.message);
+        }
+    });
+});
+```
 #Debugging
 To print debug information to the CloudCode log use:
 ```javascript
