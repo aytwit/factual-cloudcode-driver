@@ -37,3 +37,6 @@ For more info please look at:
 #Credits and thanks
 * Uses [Nico Prananta's](https://github.com/nicnocquee) [Oauth Module for Parse Cloud Code](https://github.com/nicnocquee/Oauth-Module-for-Parse-Cloud-Code)
 * Based on the [Factual node.js driver](https://github.com/Factual/factual-nodejs-driver)
+
+#License
+* Published under [GNU GPLv2](LICENSE)
