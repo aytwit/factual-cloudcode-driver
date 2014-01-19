@@ -35,7 +35,7 @@ For more info please look at:
 * HTTP-POST support is still in development.
 
 #Credits and thanks
-* Uses [Nico Prananta's](https://github.com/nicnocquee) [Oauth Module for Parse Cloud Code](https://github.com/nicnocquee/Oauth-Module-for-Parse-Cloud-Code)
+* Uses [Nico Prananta's Oauth Module for Parse Cloud Code](https://github.com/nicnocquee/Oauth-Module-for-Parse-Cloud-Code)
 * Based on the [Factual node.js driver](https://github.com/Factual/factual-nodejs-driver)
 
 #License
