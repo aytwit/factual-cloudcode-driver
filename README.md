@@ -3,16 +3,18 @@ This is a Factual-unsupported [Parse](http://parse.com) driver for [Factual's pu
 It's intended to be used within [Parse CloudCode](https://www.parse.com/docs/cloud_code_guide#cloud_code).
 
 #Installation
-Just download and copy the `/lib` folder into the `cloud` folder of your CloudCode project.
+Just download and copy the `lib` folder into the `cloud` folder of your CloudCode project.
 
 #Get Started
 Include the driver in your main.js file:
-```
+```javascript
 var Factual = require('cloud/lib/factual');
 var factual = new Factual('FACTUAL_API_KEY', 'FACTUAL_API_SECRET');
 ```
+If you don't have a Factual API account yet, [it's free and easy to get one](https://www.factual.com/api-keys/request).
+
 #Example of a GET request to the Factual API
-```
+```javascript
 Parse.Cloud.define("factualTest", function(request, response) {
     factual.get('/t/places',{q:"starbucks", "include_count":"true"}, function (error, res) {
         if(!error) {
