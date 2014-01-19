@@ -16,7 +16,7 @@ If you don't have a Factual API account yet, [it's free and easy to get one](htt
 #Example of a GET request to the Factual API
 ```javascript
 Parse.Cloud.define("factualTest", function(request, response) {
-    factual.get('/t/places',{q:"starbucks", "include_count":"true"}, function (error, res) {
+    factual.get('/t/places','q=starbucks&limit=5', function (error, res) {
         if(!error) {
             response.success(res.data);
         } else {
