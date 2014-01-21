@@ -26,16 +26,11 @@ Parse.Cloud.define("factualTest", function(request, response) {
     });
 });
 ```
-Or you can use an object:
+Or you can use an object (Note: nested objects aren't supported yet and will result in unexpected API responses):
 ```javascript
 Parse.Cloud.define("factualTest", function(request, response) {
     var params = {
-            geo: {
-               "$circle": {
-                   "$center": [34.06021,-118.41828],
-                   "$meters": 5000
-               }
-            },
+        geo: '{"$circle": {"$center": [34.06021,-118.41828],"$meters": 5000}}',
         limit: 1
     };
 
